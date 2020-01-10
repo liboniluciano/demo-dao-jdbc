@@ -15,9 +15,16 @@ public class Program2 {
         List<Department> dep = departmentDao.findAll();
         dep.forEach(System.out::println);
 
-        System.out.println("\n======== TEST1 Department findById");
+        System.out.println("\n======== TEST2 Department findById");
         Department department = departmentDao.findById(6);
         System.out.println(department);
+
+        System.out.println("\n======== TEST3 Department insert");
+        Department dp = new Department(null, "Test insert");
+        departmentDao.insert(dp);
+        System.out.println("Inserted! New id: " + dp.getId());
+
+
 
 
 
