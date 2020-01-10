@@ -19,10 +19,22 @@ public class Program2 {
         Department department = departmentDao.findById(6);
         System.out.println(department);
 
+        /*
         System.out.println("\n======== TEST3 Department insert");
         Department dp = new Department(null, "Test insert");
         departmentDao.insert(dp);
         System.out.println("Inserted! New id: " + dp.getId());
+
+         */
+        System.out.println("\n======== TEST4 Department update");
+        department = departmentDao.findById(7);
+        department.setName("Test update");
+        departmentDao.update(department);
+        System.out.println("Update completed");
+
+        
+
+
 
 
 
